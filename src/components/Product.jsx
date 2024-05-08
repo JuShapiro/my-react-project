@@ -1,14 +1,26 @@
-export const Product = () => {
-  const price = 999;
-  const imgUrl =
-    "https://images.pexels.com/photos/461198/pexels-photo-461198.jpeg?dpr=2&h=480&w=640";
+export const Product = ({ name, imgUrl, price }) => {
   return (
-    <>
-      <h2>Tacos</h2>
-      <img src={imgUrl} alt="Tacos With Lime" width="640" />
+    <div>
+      <h2>{name}</h2>
+      <img src={imgUrl} alt={name} width="480" />
       <p>Price: {price} credits</p>
-    </>
+    </div>
   );
 };
 
 export default Product;
+
+// const Mailbox = ({ name, unreadMessages }) => {
+//   return (
+//     <div>
+//       <p>Hello {name}</p>
+//       <p> {unreadMessages.length > 0
+//         ? 'You {unreadMessages.length} unread messages'
+//         : "No unread messages"}
+//       </p>
+
+//     </div>
+//   )
+// }
+
+// export default Mailbox;
